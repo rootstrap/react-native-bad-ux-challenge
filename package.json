@@ -12,12 +12,17 @@
   },
   "dependencies": {
     "@react-native-community/datetimepicker": "7.4.2",
+    "@react-navigation/native": "^6.0.8",
+    "@react-navigation/native-stack": "^6.9.1",
+    "@react-navigation/stack": "^6.3.20",
     "patch-package": "^8.0.0",
     "postinstall-postinstall": "^2.1.0",
     "react": "17.0.2",
     "react-native": "0.68.2",
     "react-native-gesture-handler": "^2.13.4",
-    "react-native-reanimated": "^3.5.4"
+    "react-native-reanimated": "^3.5.4",
+    "react-native-safe-area-context": "4.3.4",
+    "react-native-screens": "^3.21.0"
   },
   "devDependencies": {
     "@babel/core": "^7.23.3",

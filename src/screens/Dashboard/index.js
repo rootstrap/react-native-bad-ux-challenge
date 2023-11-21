@@ -5,7 +5,7 @@ import {useNavigation} from '@react-navigation/native';
 import Button from '../../components/Button';
 import styles from './styles';
 
-import {HOW_OLD_ARE_YOU} from '../../constants/screens';
+import {MANU_GENIA} from '../../constants/screens';
 
 const Dashboard = () => {
   const {navigate} = useNavigation();
@@ -13,10 +13,7 @@ const Dashboard = () => {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Let's see our bad UX Animations!</Text>
-      <Button
-        text="How old are you?"
-        onPress={() => navigate(HOW_OLD_ARE_YOU)}
-      />
+      <Button text="Manu 🧞‍♀️" onPress={() => navigate(MANU_GENIA)} />
     </View>
   );
 };

@@ -23,7 +23,7 @@ const gridData = emptyData.map((column, rowIndex) =>
 const getDistance = (x, y, newPoint) =>
   Math.sqrt(Math.pow(x - newPoint.x, 2) + Math.pow(y - newPoint.y, 2));
 
-const HowOldAreYou = () => {
+const ManuGenia = () => {
   const [selectedNumber, setSelectedNumber] = useState(1);
 
   const translationX = useSharedValue(0);
@@ -148,4 +148,4 @@ const HowOldAreYou = () => {
   );
 };
 
-export default HowOldAreYou;
+export default ManuGenia;

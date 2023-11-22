@@ -34,6 +34,7 @@ https://github.com/rootstrap/rn-animation-bad-ux-challenge/assets/8755889/b02025
    
 `<Button text="Manu 🧞‍♀️" onPress={() => navigate(MANU_GENIA)} />`
 
-5. The end, test your animation to check everything works 💪
+5. Test your animation to check everything works 💪
+6. Push your branch and create a Pull Request from your branch to main
 
 Thanks for participating! Hope you enjoyed the workshop and the final project 💜

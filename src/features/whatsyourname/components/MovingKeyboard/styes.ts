@@ -13,6 +13,14 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     lineHeight: 44,
   },
+  keyboardStyle: {
+    flexDirection: 'row',
+    margin: 30
+  },
+  keyboardButtons: {
+    flexDirection: 'row', 
+    justifyContent: 'space-between'
+  }
 });
 
 export default styles;

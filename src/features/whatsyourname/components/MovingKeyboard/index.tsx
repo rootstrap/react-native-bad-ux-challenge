@@ -18,7 +18,7 @@ const MovingKeyboard: React.FC<MovingKeyboardProps> = ({
   onDeletePress,
   onSpacePressed,
 }) => {
-  const [chars, setChars] = useState<string>('ABCDEFGHIJKLMNOPQRSTUVWXYZ');
+  const [chars, setChars] = useState<string>('ABCDEFGHIJKLMNÑOPQRSTUVWXYZ');
   const [capsLock, setCapsLock] = useState<boolean>(true);
   const initialOffset = 200
   const MIN_OFFSET = -chars.length * (LETTER_SIZE+LETTER_MARGIN) + initialOffset;
@@ -43,7 +43,7 @@ const MovingKeyboard: React.FC<MovingKeyboardProps> = ({
   return (
     <>
       <Animated.View
-        style={[keyboardStyle, {flexDirection: 'row', margin: 30}]}>
+        style={[keyboardStyle, styles.keyboardStyle]}>
         {chars.split('').map((letter, index) => (
           <TouchableOpacity onPress={() => onPress(letter)}>
             <Text key={index} style={styles.letter}>
@@ -52,7 +52,7 @@ const MovingKeyboard: React.FC<MovingKeyboardProps> = ({
           </TouchableOpacity>
         ))}
       </Animated.View>
-      <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
+      <View style={styles.keyboardButtons}>
         <Button text="⇪ Caps Lock" onPress={onCapsLockPressed} />
         <Button text="Space" onPress={onSpacePressed} />
         <Button text="&#x2190; Delete" onPress={onDeletePress} />

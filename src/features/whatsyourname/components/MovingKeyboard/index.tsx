@@ -46,7 +46,7 @@ const MovingKeyboard: React.FC<MovingKeyboardProps> = ({
     <>
       <Animated.View style={[keyboardStyle, styles.keyboardStyle]}>
         {chars.split('').map((letter, index) => (
-          <TouchableOpacity onPress={() => onPress(letter)}>
+          <TouchableOpacity onPress={() => onPress(letter)} key={letter}>
             <Text key={index} style={styles.letter}>
               {letter}
             </Text>

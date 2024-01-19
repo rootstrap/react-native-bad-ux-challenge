@@ -7,6 +7,7 @@ import styles from './styles';
 
 import {
   DELETE_ACCOUNT,
+  DELETE_ACCOUNT_GAME,
   MANU_GENIA,
   WHATS_YOUR_NAME,
 } from '../../constants/screens';
@@ -20,6 +21,10 @@ const Dashboard = () => {
       <Button text="Manu 🧞‍♀️" onPress={() => navigate(MANU_GENIA)} />
       <Button text="WhatsYourName" onPress={() => navigate(WHATS_YOUR_NAME)} />
       <Button text="Tami Suárez" onPress={() => navigate(DELETE_ACCOUNT)} />
+      <Button
+        text="DeleteAccountGame"
+        onPress={() => navigate(DELETE_ACCOUNT_GAME)}
+      />
     </View>
   );
 };

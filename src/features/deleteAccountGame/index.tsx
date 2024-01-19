@@ -31,7 +31,7 @@ const DeleteAccountGame = () => {
 
   useEffect(() => {
     if (numberOfTap === 5) {
-      Alert.alert('Account deleted', "We'll miss you", [
+      Alert.alert('Your account was deleted', "We'll miss you", [
         {text: 'OK', onPress: () => navigate(DASHBOARD)},
       ]);
     }
@@ -45,9 +45,9 @@ const DeleteAccountGame = () => {
             To delete your account:
           </CustomText>
           <CustomText>- Reach 5 by pressing circles</CustomText>
-          <CustomText>- If you preseed 🔴: -1 </CustomText>
-          <CustomText>- If you preseed 🟡: nothing</CustomText>
-          <CustomText>- If you preseed 🟢: +1</CustomText>
+          <CustomText>- If you press 🔴: -1 </CustomText>
+          <CustomText>- If you press 🟡: nothing</CustomText>
+          <CustomText>- If you press 🟢: +1</CustomText>
 
           <Button
             text="Delete Account"

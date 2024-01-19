@@ -1,3 +1,4 @@
+import {COLORS} from '../../../../constants/styles';
 import {StyleSheet} from 'react-native';
 
 const CIRCLE_SIZE = 50;
@@ -9,7 +10,11 @@ const styles = (isGreen: boolean, isRed: boolean) =>
       width: CIRCLE_SIZE,
       borderRadius: CIRCLE_SIZE / 2,
       margin: 10,
-      backgroundColor: isGreen ? 'green' : isRed ? 'red' : 'yellow',
+      backgroundColor: isGreen
+        ? COLORS.green
+        : isRed
+          ? COLORS.red
+          : COLORS.yellow,
     },
   });
 

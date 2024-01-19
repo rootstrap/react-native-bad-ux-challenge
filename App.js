@@ -11,7 +11,7 @@ import {
 } from './src/constants/screens';
 import ManuGenia from './src/screens/ManuGenia';
 import WhatsYourName from './src/features/whatsyourname/screens/WhatsYourName';
-import DelteAccount from './src/features/DeleteAccount';
+import DeleteAccount from './src/features/DeleteAccount';
 import {COLORS} from './src/constants/styles';
 
 const Stack = createStackNavigator();
@@ -36,7 +36,7 @@ const App = () => (
       />
       <Stack.Screen
         name={DELETE_ACCOUNT}
-        component={DelteAccount}
+        component={DeleteAccount}
         options={{
           headerTitle: 'Delete account',
           headerStyle: {

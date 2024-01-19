@@ -11,10 +11,7 @@ import Animated, {
 
 import React from 'react';
 import getStyles from './styles';
-
-const generateRandomNumber = (min: number, max: number) => {
-  return Math.floor(Math.random() * (max - min + 1)) + min;
-};
+import {getRandomNumber} from '../../../../utils';
 
 const isOdd = (number: number) => {
   return number % 2 !== 0;
@@ -28,7 +25,7 @@ type CircleProps = {
 export const Circle = ({count, index}: CircleProps) => {
   const {width} = useWindowDimensions();
 
-  const color = generateRandomNumber(1, 3);
+  const color = getRandomNumber(1, 3);
   const isGreen = color === 1;
   const isRed = color === 2;
   const styles = getStyles(isGreen, isRed);

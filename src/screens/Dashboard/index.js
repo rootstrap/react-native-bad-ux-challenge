@@ -9,6 +9,7 @@ import {
   DELETE_ACCOUNT,
   DELETE_ACCOUNT_GAME,
   MANU_GENIA,
+  RAMA_RASA,
   WHATS_YOUR_NAME,
   DELETE_ACCOUNT_CALA,
 } from '../../constants/screens';
@@ -33,6 +34,10 @@ const CHALLENGE_SOLUTIONS = [
   {
     name: 'Cala',
     screen: DELETE_ACCOUNT_CALA,
+  },
+  {
+    name: 'Ramarasa',
+    screen: RAMA_RASA,
   },
 ];
 

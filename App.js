@@ -9,12 +9,14 @@ import {
   DELETE_ACCOUNT_GAME,
   DELETE_ACCOUNT_CALA,
   MANU_GENIA,
+  RAMA_RASA,
   WHATS_YOUR_NAME,
 } from './src/constants/screens';
 import ManuGenia from './src/screens/ManuGenia';
 import WhatsYourName from './src/features/whatsyourname/screens/WhatsYourName';
 import DeleteAccount from './src/features/DeleteAccount';
 import DeleteAccountCala from './src/features/DeleteAccountCala';
+import Ramarasa from './src/screens/Ramarasa';
 import {COLORS} from './src/constants/styles';
 import DeleteAccountGame from './src/features/deleteAccountGame';
 
@@ -64,6 +66,11 @@ const App = () => (
           },
           headerTintColor: COLORS.white,
         }}
+      />
+      <Stack.Screen
+        name={RAMA_RASA}
+        component={Ramarasa}
+        options={{headerTitle: 'Ramarasa Corp. 👀'}}
       />
     </Stack.Navigator>
   </NavigationContainer>

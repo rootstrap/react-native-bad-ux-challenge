@@ -31,7 +31,7 @@ const ReactToPost = () => {
           description: faker.commerce.productDescription(),
         }
       ].map(product => (
-        <AnimatedCard name={product.name} description={product.description} />
+        <AnimatedCard key={product.name} name={product.name} description={product.description} />
       ))}
     </ScrollView>
   );

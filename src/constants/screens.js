@@ -5,3 +5,4 @@ export const DELETE_ACCOUNT = 'DeleteAccount';
 export const DELETE_ACCOUNT_GAME = 'DeleteAccountGame';
 export const DELETE_ACCOUNT_CALA = 'DeleteAccountCala';
 export const RAMA_RASA = 'Ramarasa';
+export const REACT_TO_POST = 'ReactToPost';

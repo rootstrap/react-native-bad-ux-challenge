@@ -7,12 +7,14 @@ import {
   DASHBOARD,
   DELETE_ACCOUNT,
   DELETE_ACCOUNT_GAME,
+  DELETE_ACCOUNT_CALA,
   MANU_GENIA,
   WHATS_YOUR_NAME,
 } from './src/constants/screens';
 import ManuGenia from './src/screens/ManuGenia';
 import WhatsYourName from './src/features/whatsyourname/screens/WhatsYourName';
 import DeleteAccount from './src/features/DeleteAccount';
+import DeleteAccountCala from './src/features/DeleteAccountCala';
 import {COLORS} from './src/constants/styles';
 import DeleteAccountGame from './src/features/deleteAccountGame';
 
@@ -51,6 +53,17 @@ const App = () => (
         name={DELETE_ACCOUNT_GAME}
         component={DeleteAccountGame}
         options={{headerTitle: "Let's play"}}
+      />
+      <Stack.Screen
+        name={DELETE_ACCOUNT_CALA}
+        component={DeleteAccountCala}
+        options={{
+          headerTitle: 'Delete account',
+          headerStyle: {
+            backgroundColor: COLORS.black,
+          },
+          headerTintColor: COLORS.white,
+        }}
       />
     </Stack.Navigator>
   </NavigationContainer>

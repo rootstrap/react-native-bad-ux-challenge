@@ -10,7 +10,31 @@ import {
   DELETE_ACCOUNT_GAME,
   MANU_GENIA,
   WHATS_YOUR_NAME,
+  DELETE_ACCOUNT_CALA,
 } from '../../constants/screens';
+
+const CHALLENGE_SOLUTIONS = [
+  {
+    name: 'Manu 🧞‍♀️',
+    screen: MANU_GENIA,
+  },
+  {
+    name: 'WhatsYourName',
+    screen: WHATS_YOUR_NAME,
+  },
+  {
+    name: 'Tami Suárez',
+    screen: DELETE_ACCOUNT,
+  },
+  {
+    name: 'DeleteAccountGame',
+    screen: DELETE_ACCOUNT_GAME,
+  },
+  {
+    name: 'Cala',
+    screen: DELETE_ACCOUNT_CALA,
+  },
+];
 
 const Dashboard = () => {
   const {navigate} = useNavigation();
@@ -18,13 +42,9 @@ const Dashboard = () => {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Let's see our bad UX Animations!</Text>
-      <Button text="Manu 🧞‍♀️" onPress={() => navigate(MANU_GENIA)} />
-      <Button text="WhatsYourName" onPress={() => navigate(WHATS_YOUR_NAME)} />
-      <Button text="Tami Suárez" onPress={() => navigate(DELETE_ACCOUNT)} />
-      <Button
-        text="DeleteAccountGame"
-        onPress={() => navigate(DELETE_ACCOUNT_GAME)}
-      />
+      {CHALLENGE_SOLUTIONS.map(({name, screen}) => (
+        <Button key={name} text={name} onPress={() => navigate(screen)} />
+      ))}
     </View>
   );
 };

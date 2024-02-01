@@ -20,7 +20,7 @@ const ANSWERS = [
   {id: 7, label: 'Seriously?'},
 ];
 
-const DelteAccount = () => {
+const DeleteAccount = () => {
   const navigate = useNavigation<any>();
 
   const onPress = (deleteAccount?: boolean) => {
@@ -56,4 +56,4 @@ const DelteAccount = () => {
   );
 };
 
-export default DelteAccount;
+export default DeleteAccount;

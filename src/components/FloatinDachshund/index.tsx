@@ -10,10 +10,7 @@ import Animated, {
 import distractor from '../../assets/dachshund.png';
 import {SCREEN_HEIGHT} from '../../constants/common';
 import styles from './styles';
-
-const getRandomNumber = (min: number, max: number) => {
-  return Math.random() * (max - min) + min;
-};
+import {getRandomNumber} from '../../utils';
 
 const FloatingDachshund = () => {
   const distractorYAxis = useSharedValue(SCREEN_HEIGHT + 100);

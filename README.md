@@ -38,3 +38,13 @@ https://github.com/rootstrap/rn-animation-bad-ux-challenge/assets/8755889/b02025
 6. Push your branch and create a Pull Request from your branch to main
 
 Thanks for participating! Hope you enjoyed the workshop and the final project 💜
+
+## Additional examples from the workshop
+![0](https://github.com/rootstrap/react-native-bad-ux-challenge/assets/14322814/0950e713-e4cc-4dd3-8bcc-7f7d2eac0afd)
+![1](https://github.com/rootstrap/react-native-bad-ux-challenge/assets/14322814/c9789275-c6ca-4cc5-96c8-dc3d58411f53)
+![2](https://github.com/rootstrap/react-native-bad-ux-challenge/assets/14322814/c6077fd4-0798-4c8c-a292-b1823763983d)
+![3](https://github.com/rootstrap/react-native-bad-ux-challenge/assets/14322814/1bec415f-94fb-4147-a40c-1ebd66ea8cec)
+![4](https://github.com/rootstrap/react-native-bad-ux-challenge/assets/14322814/51363a10-988b-43df-a304-41129269eff5)
+![5](https://github.com/rootstrap/react-native-bad-ux-challenge/assets/14322814/7742d242-1d0a-4496-87a5-1a33bc46dc79)
+![6](https://github.com/rootstrap/react-native-bad-ux-challenge/assets/14322814/0096dd61-9e9a-41e2-ac36-6c0d15ef2287)
+![7](https://github.com/rootstrap/react-native-bad-ux-challenge/assets/14322814/ba1d16f2-516e-4ea7-b30d-62aa4411a067)

@@ -11,11 +11,14 @@ import {
   MANU_GENIA,
   RAMA_RASA,
   WHATS_YOUR_NAME,
+  SLIDER_FLAVIA,
 } from './src/constants/screens';
 import ManuGenia from './src/screens/ManuGenia';
 import WhatsYourName from './src/features/whatsyourname/screens/WhatsYourName';
 import DeleteAccount from './src/features/DeleteAccount';
 import DeleteAccountCala from './src/features/DeleteAccountCala';
+import SliderFlavia from './src/features/SliderFlavia';
+
 import Ramarasa from './src/screens/Ramarasa';
 import {COLORS} from './src/constants/styles';
 import DeleteAccountGame from './src/features/deleteAccountGame';
@@ -72,6 +75,7 @@ const App = () => (
         component={Ramarasa}
         options={{headerTitle: 'Ramarasa Corp. 👀'}}
       />
+      <Stack.Screen name={SLIDER_FLAVIA} component={SliderFlavia} />
     </Stack.Navigator>
   </NavigationContainer>
 );

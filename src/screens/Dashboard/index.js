@@ -12,6 +12,7 @@ import {
   RAMA_RASA,
   WHATS_YOUR_NAME,
   DELETE_ACCOUNT_CALA,
+  SLIDER_FLAVIA,
 } from '../../constants/screens';
 
 const CHALLENGE_SOLUTIONS = [
@@ -38,6 +39,10 @@ const CHALLENGE_SOLUTIONS = [
   {
     name: 'Ramarasa',
     screen: RAMA_RASA,
+  },
+  {
+    name: 'Bad Slider Animation - Flavia Cohen',
+    screen: SLIDER_FLAVIA,
   },
 ];
 

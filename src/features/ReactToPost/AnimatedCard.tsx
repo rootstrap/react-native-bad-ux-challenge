@@ -1,11 +1,5 @@
 import React, {memo, useState} from 'react';
-import {
-  Pressable,
-  View,
-  StyleSheet,
-  useWindowDimensions,
-  Text,
-} from 'react-native';
+import {Pressable, View, Text} from 'react-native';
 import {Gesture, GestureDetector} from 'react-native-gesture-handler';
 import Animated, {
   runOnJS,
@@ -18,6 +12,11 @@ import Animated, {
   withTiming,
 } from 'react-native-reanimated';
 import {Portal} from 'react-native-paper';
+import {SCREEN_HEIGHT, SCREEN_WIDTH} from '../../constants/common';
+import styles from './styles';
+
+const screenHeight = SCREEN_HEIGHT;
+const screenWidth = SCREEN_WIDTH;
 
 const emojiHeart = '❤️';
 const emojiQuestion = '❓';
@@ -35,9 +34,6 @@ function AnimatedTransactionRowItemComponent({
   name: string;
   description: string;
 }) {
-  const styles = createStyles();
-  const {height: screenHeight, width: screenWidth} = useWindowDimensions();
-
   const [internalReaction, setInternalReaction] = useState<string>();
 
   const selectedReaction = useSharedValue<undefined | string>('');
@@ -286,9 +282,9 @@ function AnimatedTransactionRowItemComponent({
                 </View>
               )}
               <Portal>
-                <Animated.View style={[{flex: 1}, backdrop]}>
+                <Animated.View style={[styles.flexStyle, backdrop]}>
                   <Pressable
-                    style={{flex: 1}}
+                    style={styles.flexStyle}
                     onPress={() => (isVisible.value = false)}
                   />
                 </Animated.View>
@@ -298,12 +294,7 @@ function AnimatedTransactionRowItemComponent({
                     styles.emojiReactionsContainer,
                     containerAnimatedStyle,
                   ]}>
-                  <View
-                    style={{
-                      display: 'flex',
-                      flexDirection: 'row',
-                      padding: 10,
-                    }}>
+                  <View style={styles.reactionContainer}>
                     <Animated.View
                       style={[styles.emojiContainer, heartAnimatedStyles]}
                       onLayout={event => {
@@ -421,87 +412,9 @@ const EmojiButton = (props: {
 }) => {
   return (
     <Pressable onPress={props.onPress}>
-      <Text style={[{fontSize: 26}]}>{props.emoji}</Text>
+      <Text style={styles.emojiText}>{props.emoji}</Text>
     </Pressable>
   );
 };
-
-const createStyles = () =>
-  StyleSheet.create({
-    container: {
-      backgroundColor: '#F2F2F2',
-      shadowColor: '#000',
-      shadowOffset: {
-        width: 0,
-        height: 1,
-      },
-      shadowOpacity: 0.1,
-      shadowRadius: 10,
-      elevation: 2,
-      borderWidth: 0.5,
-      borderColor: '#D9D9D9',
-      margin: 15,
-      borderRadius: 5,
-      padding: 10,
-    },
-    footer: {
-      width: '100%',
-      flexDirection: 'row',
-      justifyContent: 'space-between',
-    },
-    reactionsContainer: {},
-    addReactionPressableContainer: {
-      flexDirection: 'row',
-      marginLeft: 5,
-    },
-    title: {
-      fontSize: 20,
-      fontWeight: '600',
-    },
-    subtitle: {
-      fontSize: 16,
-    },
-    topRowContainer: {
-      marginBottom: 4,
-    },
-    reactionEmojiContainer: {
-      borderRadius: 50,
-      bottom: -30,
-      padding: 5,
-      backgroundColor: '#D4838F50',
-    },
-    emoji: {
-      fontSize: 25,
-      textAlign: 'center',
-    },
-    emojiContainer: {
-      flexDirection: 'row',
-      justifyContent: 'center',
-      width: CONTAINER_WIDTH / 6,
-    },
-    reactionsContainerShadow: {
-      shadowColor: '#000',
-      shadowOffset: {
-        width: 0,
-        height: 1,
-      },
-      shadowOpacity: 0.1,
-      shadowRadius: 10,
-      elevation: 2,
-    },
-    emojiReactionsContainer: {
-      position: 'absolute',
-      bottom: 20,
-      right: -10,
-      flex: 1,
-      flexDirection: 'column',
-      rowGap: 5,
-      alignItems: 'center',
-      borderRadius: 50,
-      backgroundColor: 'white',
-      justifyContent: 'center',
-      alignContent: 'center',
-    },
-  });
 
 export default memo(AnimatedTransactionRowItemComponent);

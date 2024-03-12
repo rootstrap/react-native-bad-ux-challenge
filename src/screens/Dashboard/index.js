@@ -1,5 +1,5 @@
 import React from 'react';
-import {Text, View} from 'react-native';
+import {Text} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 
 import Button from '../../components/Button';
@@ -15,6 +15,7 @@ import {
   DELETE_ACCOUNT_CALA,
   SLIDER_FLAVIA,
 } from '../../constants/screens';
+import {ScrollView} from 'react-native-gesture-handler';
 
 const CHALLENGE_SOLUTIONS = [
   {
@@ -55,12 +56,14 @@ const Dashboard = () => {
   const {navigate} = useNavigation();
 
   return (
-    <View style={styles.container}>
+    <ScrollView
+      style={styles.container}
+      contentContainerStyle={styles.contentContainerStyle}>
       <Text style={styles.title}>Let's see our bad UX Animations!</Text>
       {CHALLENGE_SOLUTIONS.map(({name, screen}) => (
         <Button key={name} text={name} onPress={() => navigate(screen)} />
       ))}
-    </View>
+    </ScrollView>
   );
 };
 

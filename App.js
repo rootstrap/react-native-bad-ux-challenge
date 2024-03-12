@@ -1,6 +1,7 @@
 import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
+import {Provider} from 'react-native-paper';
 
 import Dashboard from './src/screens/Dashboard';
 import {
@@ -12,16 +13,18 @@ import {
   RAMA_RASA,
   REACT_TO_POST,
   WHATS_YOUR_NAME,
+  SLIDER_FLAVIA,
 } from './src/constants/screens';
 import ManuGenia from './src/screens/ManuGenia';
 import WhatsYourName from './src/features/whatsyourname/screens/WhatsYourName';
 import DeleteAccount from './src/features/DeleteAccount';
 import DeleteAccountCala from './src/features/DeleteAccountCala';
+import SliderFlavia from './src/features/SliderFlavia';
+
 import Ramarasa from './src/screens/Ramarasa';
 import {COLORS} from './src/constants/styles';
 import DeleteAccountGame from './src/features/deleteAccountGame';
 import ReactToPost from './src/features/ReactToPost';
-import {Provider} from 'react-native-paper';
 
 const Stack = createStackNavigator();
 
@@ -81,6 +84,7 @@ const App = () => (
           component={ReactToPost}
           options={{headerTitle: 'React'}}
         />
+        <Stack.Screen name={SLIDER_FLAVIA} component={SliderFlavia} />
       </Stack.Navigator>
     </NavigationContainer>
   </Provider>

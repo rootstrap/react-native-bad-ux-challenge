@@ -10,6 +10,7 @@ import {
   DELETE_ACCOUNT_GAME,
   MANU_GENIA,
   RAMA_RASA,
+  REACT_TO_POST,
   WHATS_YOUR_NAME,
   DELETE_ACCOUNT_CALA,
   SLIDER_FLAVIA,
@@ -43,6 +44,10 @@ const CHALLENGE_SOLUTIONS = [
   {
     name: 'Bad Slider Animation - Flavia Cohen',
     screen: SLIDER_FLAVIA,
+  },
+  {
+    name: 'Guille',
+    screen: REACT_TO_POST,
   },
 ];
 
